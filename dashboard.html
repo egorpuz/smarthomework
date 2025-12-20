@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Личный кабинет - Умное ДЗ</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="app-container">
+      <aside class="sidebar">
+        <div class="sidebar-header"><div class="logo">УДЗ</div></div>
+        <nav class="sidebar-nav">
+          <a href="dashboard.html" class="nav-item active"
+            ><span>🏠 Личный кабинет</span></a
+          >
+          <a href="navigator.html" class="nav-item"
+            ><span>🗺️ Навигатор</span></a
+          >
+          <a href="focus-room.html" class="nav-item"
+            ><span>🎯 Фокус-комната</span></a
+          >
+          <a href="library.html" class="nav-item"><span>📚 Библиотека</span></a>
+        </nav>
+        <div class="sidebar-footer">
+          <a href="profile.html" class="nav-item"><span>👤 Профиль</span></a>
+        </div>
+      </aside>
+      <main class="main-content">
+        <header class="main-header">
+          <h1>С возвращением, Egor!</h1>
+          <p>Готовы сделать домашку умнее?</p>
+        </header>
+        <div class="dashboard-grid">
+          <div class="card large-card continue-card">
+            <h3>Продолжить изучение</h3>
+            <p>Физика: Законы Ньютона</p>
+            <div class="progress-bar">
+              <div class="progress" style="width: 60%"></div>
+            </div>
+            <a href="navigator.html" class="card-button">Перейти к теме</a>
+          </div>
+          <div class="card stats-card">
+            <h3>Сегодняшний прогресс</h3>
+            <div class="stat-circle">
+              <span class="stat-number">2/3</span
+              ><span class="stat-label">темы изучено</span>
+            </div>
+          </div>
+          <div class="card quick-access-card">
+            <h4>Быстрый доступ</h4>
+            <a href="focus-room.html" class="access-link"
+              >Начать фокус-сессию</a
+            >
+            <a href="library.html" class="access-link">Найти шпаргалку</a>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>

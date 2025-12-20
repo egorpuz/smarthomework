@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #1a202c;
+  color: #f7fafc;
+  font-family: "Inter", sans-serif;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+body.fade-out {
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Montserrat", sans-serif;
+}
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+.sidebar {
+  width: 240px;
+  background-color: #161d29;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+.sidebar-header .logo {
+  font-size: 2em;
+  font-weight: 700;
+  text-align: center;
+  color: #00f5d4;
+  margin-bottom: 40px;
+}
+.sidebar-nav {
+  flex-grow: 1;
+}
+.nav-item {
+  display: block;
+  color: #a0aec0;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.3s, color 0.3s;
+}
+.nav-item:hover {
+  background-color: rgba(0, 245, 212, 0.1);
+  color: #ffffff;
+}
+.nav-item.active {
+  background-color: #00f5d4;
+  color: #1a202c;
+  box-shadow: 0 5px 15px rgba(0, 245, 212, 0.2);
+}
+.main-content {
+  flex-grow: 1;
+  padding: 40px;
+}
+.main-header h1 {
+  font-size: 2.5em;
+  margin-bottom: 5px;
+}
+.main-header p {
+  font-size: 1.2em;
+  color: #a0aec0;
+  margin-bottom: 40px;
+}
