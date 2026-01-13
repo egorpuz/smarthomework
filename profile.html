@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Профиль - Умное ДЗ</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/profile.css" />
+    <!-- Специфичные стили -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="app-container">
+      <!-- Боковая панель -->
+      <aside class="sidebar">
+        <div class="sidebar-header"><div class="logo">УДЗ</div></div>
+        <nav class="sidebar-nav">
+          <a href="dashboard.html" class="nav-item"
+            ><span>🏠 Личный кабинет</span></a
+          >
+          <a href="navigator.html" class="nav-item"
+            ><span>🗺️ Навигатор</span></a
+          >
+          <a href="focus-room.html" class="nav-item"
+            ><span>🎯 Фокус-комната</span></a
+          >
+          <a href="library.html" class="nav-item"><span>📚 Библиотека</span></a>
+        </nav>
+        <div class="sidebar-footer">
+          <a href="profile.html" class="nav-item active"
+            ><span>👤 Профиль</span></a
+          >
+        </div>
+      </aside>
+
+      <!-- Основной контент -->
+      <main class="main-content">
+        <header class="main-header">
+          <h1>Настройки профиля</h1>
+          <p>Управляйте своим аккаунтом и предпочтениями.</p>
+        </header>
+
+        <div class="profile-container">
+          <!-- Левая колонка: Карточка пользователя -->
+          <div class="profile-card">
+            <!-- ... внутри profile-card ... -->
+            <div class="avatar-wrapper">
+              <img
+                src="https://ui-avatars.com/api/?name=User&background=00F5D4&color=1A202C&size=150"
+                alt="Avatar"
+                class="profile-avatar"
+                id="avatar-img"
+              />
+              <button class="edit-avatar-btn" id="edit-avatar-btn">✏️</button>
+              <!-- Скрытый инпут для выбора файла -->
+              <input
+                type="file"
+                id="avatar-input"
+                accept="image/*"
+                style="display: none"
+              />
+            </div>
+            <h2 id="profile-name-display">Egor Puzyrev</h2>
+            <p class="user-role" id="profile-class-display">Ученик 9 класса</p>
+
+            <div class="mini-stats">
+              <div class="stat-item">
+                <span class="val" id="stat-topics">0</span>
+                <span class="lbl">Тем изучено</span>
+              </div>
+              <div class="stat-item">
+                <span class="val" id="stat-hours">0ч</span>
+                <span class="lbl">В фокусе</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Правая колонка: Форма настроек -->
+          <div class="settings-form-container">
+            <form class="settings-form">
+              <div class="form-group">
+                <label for="username">Имя пользователя</label>
+                <input type="text" id="username" value="Egor Puzyrev" />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" value="egor@example.com" />
+              </div>
+
+              <div class="form-group">
+                <label for="class">Класс</label>
+                <select id="class">
+                  <option value="8">8 класс</option>
+                  <option value="9" selected>9 класс</option>
+                  <option value="10">10 класс</option>
+                  <option value="11">11 класс</option>
+                </select>
+              </div>
+
+              <div class="form-divider"></div>
+
+              <h3>Предпочтения</h3>
+              <div class="checkbox-group">
+                <label class="switch">
+                  <input type="checkbox" id="theme-toggle" />
+                  <span class="slider round"></span>
+                </label>
+                <span>Светлая тема</span>
+              </div>
+              <div class="checkbox-group">
+                <label class="switch">
+                  <input type="checkbox" id="notify-toggle" />
+                  <span class="slider round"></span>
+                </label>
+                <span>Уведомления о дедлайнах</span>
+              </div>
+
+              <button type="submit" class="save-btn">
+                Сохранить изменения
+              </button>
+            </form>
+          </div>
+        </div>
+      </main>
+    </div>
+    <!-- ... ВНИЗУ ФАЙЛА ... -->
+    <script src="js/main.js"></script>
+    <script src="js/profile.js"></script>
+    <!-- Новый скрипт только для профиля -->
+  </body>
+</html>

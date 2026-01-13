@@ -1,0 +1,219 @@
+/* ============================================= */
+/*             СТИЛИ ДЛЯ ПРОФИЛЯ                 */
+/*              (css/profile.css)                */
+/* ============================================= */
+
+.profile-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Левая колонка уже, правая шире */
+  gap: 40px;
+  align-items: start;
+}
+
+/* Карточка пользователя */
+.profile-card {
+  background-color: #161d29;
+  padding: 40px 30px;
+  border-radius: 16px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.avatar-wrapper {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 20px;
+}
+
+.profile-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 4px solid #00f5d4;
+  object-fit: cover;
+}
+
+.edit-avatar-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #2d3748;
+  border: 2px solid #161d29;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s;
+}
+.edit-avatar-btn:hover {
+  background-color: #4a5568;
+}
+
+.profile-card h2 {
+  font-size: 1.5em;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+.user-role {
+  color: #00f5d4;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.mini-stats {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-item .val {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.stat-item .lbl {
+  font-size: 0.85em;
+  color: #a0aec0;
+}
+
+/* Форма настроек */
+.settings-form-container {
+  background-color: #161d29;
+  padding: 40px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 10px;
+  color: #a0aec0;
+  font-size: 0.9em;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  background-color: #1a202c;
+  border: 1px solid #2d3748;
+  padding: 12px 15px;
+  border-radius: 8px;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-size: 1em;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #00f5d4;
+}
+
+.form-divider {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 30px 0;
+}
+
+.settings-form h3 {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+/* Переключатели (Switch) */
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 15px;
+  color: #e5e7eb;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #2d3748;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #00f5d4;
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
+
+.save-btn {
+  background-color: #00f5d4;
+  color: #1a202c;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.save-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 245, 212, 0.3);
+}
+
+@media (max-width: 900px) {
+  .profile-container {
+    grid-template-columns: 1fr;
+  }
+}

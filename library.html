@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Библиотека - Умное ДЗ</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/library.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="app-container">
+      <!-- Боковая панель -->
+      <aside class="sidebar">
+        <div class="sidebar-header"><div class="logo">УДЗ</div></div>
+        <nav class="sidebar-nav">
+          <a href="dashboard.html" class="nav-item"
+            ><span>🏠 Личный кабинет</span></a
+          >
+          <a href="navigator.html" class="nav-item"
+            ><span>🗺️ Навигатор</span></a
+          >
+          <a href="focus-room.html" class="nav-item"
+            ><span>🎯 Фокус-комната</span></a
+          >
+          <a href="library.html" class="nav-item active"
+            ><span>📚 Библиотека</span></a
+          >
+        </nav>
+        <div class="sidebar-footer">
+          <a href="profile.html" class="nav-item"><span>👤 Профиль</span></a>
+        </div>
+      </aside>
+
+      <!-- Основной контент -->
+      <main class="main-content">
+        <header class="main-header">
+          <h1>Библиотека шпаргалок</h1>
+          <p>
+            Все формулы и правила в одном месте. Наведите на карточку, чтобы
+            увидеть ответ.
+          </p>
+        </header>
+
+        <!-- Панель фильтров -->
+        <div class="filter-bar">
+          <button class="filter-btn active" data-filter="all">Все</button>
+          <button class="filter-btn" data-filter="math">Математика</button>
+          <button class="filter-btn" data-filter="physics">Физика</button>
+          <button class="filter-btn" data-filter="chemistry">Химия</button>
+          <button class="filter-btn" data-filter="russian">Русский язык</button>
+        </div>
+
+        <!-- Сетка карточек -->
+        <div class="library-grid">
+          <!-- Карточка Математика -->
+          <div class="card-container" data-category="math">
+            <div class="flash-card">
+              <div class="card-front">
+                <span class="card-icon">📐</span>
+                <h3>Теорема Пифагора</h3>
+              </div>
+              <div class="card-back">
+                <p>В прямоугольном треугольнике:</p>
+                <div class="formula">a² + b² = c²</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Карточка Физика -->
+          <div class="card-container" data-category="physics">
+            <div class="flash-card">
+              <div class="card-front">
+                <span class="card-icon">🍎</span>
+                <h3>II Закон Ньютона</h3>
+              </div>
+              <div class="card-back">
+                <p>Сила равна произведению массы на ускорение:</p>
+                <div class="formula">F = ma</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Карточка Химия -->
+          <div class="card-container" data-category="chemistry">
+            <div class="flash-card">
+              <div class="card-front">
+                <span class="card-icon">💧</span>
+                <h3>Закон Авогадро</h3>
+              </div>
+              <div class="card-back">
+                <p>В равных объёмах газов содержится равное число молекул:</p>
+                <div class="formula">V₁/n₁ = V₂/n₂</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Карточка Русский язык -->
+          <div class="card-container" data-category="russian">
+            <div class="flash-card">
+              <div class="card-front">
+                <span class="card-icon">📝</span>
+                <h3>Причастный оборот</h3>
+              </div>
+              <div class="card-back">
+                <p>
+                  Обособляется, если стоит <strong>после</strong> определяемого
+                  слова.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Еще карточка Математика -->
+          <div class="card-container" data-category="math">
+            <div class="flash-card">
+              <div class="card-front">
+                <span class="card-icon">✖️</span>
+                <h3>Квадратное уравнение</h3>
+              </div>
+              <div class="card-back">
+                <div class="formula">x = [-b ± √(D)] / 2a</div>
+                <p>D = b² - 4ac</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="js/library.js"></script>
+  </body>
+</html>

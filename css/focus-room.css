@@ -1,0 +1,118 @@
+/* ============================================= */
+/*             СТИЛИ ДЛЯ ФОКУС-КОМНАТЫ            */
+/*             (css/focus-room.css)              */
+/* ============================================= */
+
+.focus-mode {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.focus-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#session-title {
+  font-size: 2.2em;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+#session-task {
+  font-size: 1.2em;
+  color: #a0aec0;
+  margin-bottom: 40px;
+}
+
+.timer-wrapper {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin-bottom: 40px;
+}
+
+.timer-display {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#time-left {
+  font-family: "Montserrat", sans-serif;
+  font-size: 4.5em;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -2px;
+}
+
+.timer-progress {
+  transform: rotate(-90deg);
+}
+
+.progress-bg {
+  fill: none;
+  stroke: #2d3748;
+  stroke-width: 12;
+}
+
+.progress-bar {
+  fill: none;
+  stroke: #00f5d4;
+  stroke-width: 12;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 1s linear;
+}
+
+.timer-controls {
+  display: flex;
+  gap: 15px;
+}
+
+.control-btn {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1em;
+  border: none;
+  border-radius: 50px;
+  padding: 15px 35px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.control-btn .icon {
+  font-size: 0.8em;
+}
+.control-btn:hover {
+  transform: translateY(-3px);
+}
+
+.start {
+  background-color: #00f5d4;
+  color: #1a202c;
+}
+.start:hover {
+  box-shadow: 0 5px 15px rgba(0, 245, 212, 0.2);
+}
+
+.pause {
+  background-color: #f97316;
+  color: #ffffff;
+}
+.pause:hover {
+  box-shadow: 0 5px 15px rgba(249, 115, 22, 0.2);
+}
+
+.reset {
+  background-color: #4a5568;
+  color: #ffffff;
+}
+.reset:hover {
+  box-shadow: 0 5px 15px rgba(74, 85, 104, 0.2);
+}

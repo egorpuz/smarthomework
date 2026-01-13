@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Фокус-комната - Умное ДЗ</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/focus-room.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="app-container">
+      <!-- Боковая панель -->
+      <aside class="sidebar">
+        <div class="sidebar-header"><div class="logo">УДЗ</div></div>
+        <nav class="sidebar-nav">
+          <a href="dashboard.html" class="nav-item"
+            ><span>🏠 Личный кабинет</span></a
+          >
+          <a href="navigator.html" class="nav-item"
+            ><span>🗺️ Навигатор</span></a
+          >
+          <a href="focus-room.html" class="nav-item active"
+            ><span>🎯 Фокус-комната</span></a
+          >
+          <a href="library.html" class="nav-item"><span>📚 Библиотека</span></a>
+        </nav>
+        <div class="sidebar-footer">
+          <a href="profile.html" class="nav-item"><span>👤 Профиль</span></a>
+        </div>
+      </aside>
+
+      <!-- Основной контент фокус-комнаты -->
+      <main class="main-content focus-mode">
+        <div class="focus-container">
+          <h2 id="session-title">Время сфокусироваться</h2>
+          <p id="session-task">Текущая задача: Решение уравнений по химии</p>
+
+          <div class="timer-wrapper">
+            <svg
+              class="timer-progress"
+              width="300"
+              height="300"
+              viewBox="0 0 300 300"
+            >
+              <circle class="progress-bg" cx="150" cy="150" r="140" />
+              <circle class="progress-bar" cx="150" cy="150" r="140" />
+            </svg>
+            <div class="timer-display">
+              <div id="time-left">25:00</div>
+            </div>
+          </div>
+
+          <div class="timer-controls">
+            <button id="start-btn" class="control-btn start">
+              <span class="icon">▶</span> Старт
+            </button>
+            <button
+              id="pause-btn"
+              class="control-btn pause"
+              style="display: none"
+            >
+              <span class="icon">❚❚</span> Пауза
+            </button>
+            <button id="reset-btn" class="control-btn reset">
+              <span class="icon">⟳</span> Сброс
+            </button>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/focus-room.js"></script>
+  </body>
+</html>
