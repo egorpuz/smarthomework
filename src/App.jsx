@@ -1,14 +1,16 @@
 import './App.css'
+import { useTranslation } from 'react-i18next';
+
 
 function App() {
+
+  const { t } = useTranslation();
   return (
     <>
       <section id="center">
         <div>
           <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
+          <h1>{t('welcome')}</h1>;
         </div>
       </section>
     </>
