@@ -2,7 +2,7 @@
 {
   "resources": {
     "paths": {
-      "include": [],
+      "include": ["src/locales/**/*.json"],
       "exclude": []
     },
     "file": {
